@@ -1,17 +1,25 @@
 package com.develogical;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class RecentlyUsedList {
-    private String content; // 1 item max
+    private final List<String> content = new ArrayList<>();
 
     boolean isEmpty() {
-        return content == null;
+        return content.isEmpty();
     }
 
     void add(String element) {
-        content = element;
+        content.add(element);
     }
 
     int size() {
-        return content == null ? 0 : 1;
+        return content.size();
     }
+
+    String get(int i) {
+        return content.get(i);
+    }
+
 }
