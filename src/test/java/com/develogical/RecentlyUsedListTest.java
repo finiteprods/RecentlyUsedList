@@ -42,8 +42,10 @@ public class RecentlyUsedListTest {
 
     @Test
     public void dupMovedNotAdded() {
-        l.add("cat");
-        l.add("cat");
-        assertThat(l.size(), is(1));
+        l.add("one");
+        l.add("two");
+        l.add("one");
+        assertThat(l.size(), is(2));
+        assertThat(l.get(0), is("one"));
     }
 }
