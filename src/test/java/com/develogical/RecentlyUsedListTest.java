@@ -39,4 +39,11 @@ public class RecentlyUsedListTest {
         assertThat(l.get(0), is("dog"));
         assertThat(l.get(1), is("cat"));
     }
+
+    @Test
+    public void dupMovedNotAdded() {
+        l.add("cat");
+        l.add("cat");
+        assertThat(l.size(), is(1));
+    }
 }
