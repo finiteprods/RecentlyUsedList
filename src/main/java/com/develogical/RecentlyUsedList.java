@@ -11,8 +11,8 @@ class RecentlyUsedList {
     }
 
     void add(String element) {
-        if (!content.contains(element))
-            content.add(0, element);
+        content.remove(element);
+        content.add(0, element);
     }
 
     int size() {

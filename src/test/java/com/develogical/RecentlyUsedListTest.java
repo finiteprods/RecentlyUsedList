@@ -28,7 +28,6 @@ public class RecentlyUsedListTest {
     @Test
     public void canRetrieveFrom() {
         l.add("cat");
-        l.add("dog");
         assertThat(l.get(0), is("cat"));
     }
 
